@@ -3,7 +3,6 @@
 #include<string>
 #include<filesystem>
 #include <iostream>
-#include <direct.h>
 using namespace std;
 void c2cpp_path(string &str);//replaces '\' with '/'
 
@@ -317,23 +316,14 @@ int main()
 {
 
     fstream fd("DELTARUNE_DIRECTORY.txt");
-    char c_path[1024];
-    if (getcwd(c_path, 1024) != NULL) {
-        // print the current working directory
-        cout << "Current working directory: " << c_path << endl;
-    }
-    else {
-        // If _getcwd returns NULL, print an error message
-        cerr << "Error getting current working directory" << endl;
-    }
-    string delta_path,c_path2;
+    string delta_path;
 
     if(!fd.is_open())
     {
         printf("Path to Deltarune Not Found\n");
         printf("Close This Programm,copy the path to the deltarune directory in the file:\n");
         printf("[DELTARUNE_DIRECTORY]\nAnd then reopen the programm\n");
-        printf("By the way please run this exe in a new folder for");
+        printf("By the way please run this exe in a new folder");
         fopen("DELTARUNE_DIRECTORY.txt","w");
         getchar();
         return 0;
@@ -341,7 +331,6 @@ int main()
     getline(fd,delta_path);
     fd.close();
     c2cpp_path(delta_path);
-    c2cpp_path(c_path2);
     string path_demo=delta_path+"/snd_usefountain.ogg";
     if(fopen(path_demo.c_str(),"r")==NULL)
         filesystem::copy_file(delta_path+"/chapter1_windows/snd_usefountain.ogg","1_36 - Your Power.ogg");
@@ -358,7 +347,7 @@ int main()
             o=ostname[i][j];
             printf("renaming %-30s to %-55s ",f.c_str(),o.c_str());
             f=delta_path+"/mus/"+filename[i][j];
-            o=c_path2 +ostname[i][j]+".ogg";
+            o=ostname[i][j]+".ogg";
             filesystem::copy_file(f,o);
             printf("->STAT:%-d\n",stat);
 
