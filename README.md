@@ -5,3 +5,4 @@ Works both with the deltarune demo and the full release of deltarune
 When the programm runs the first time , a .txt for the directory of DELTARUNEDEMO will be created.
 Once you close the programm, add the directory (save the txt) and then rerun the programm.
 Enjoy :))
+[For compiling .... it's bare bones cpp]
