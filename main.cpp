@@ -98,8 +98,8 @@ std::string ostname[CH][N_OST]=
 , "2_44 - You Can Always Come Home"//~is an identifier that this file is copy of another with the same name but difrent place in ost
 , "2_45 - Until Next Time"
 , "2_46 - Before the Story"
-, "!2_47 - Berdly"//unsued
-}
+, "!2_47 - Berdly"//not in games filess
+}//the rest of OST is here cause i originally wanted to make this for all 5 chapters but that comes with many complications that am too lazy to deal with
 ,{ "3_01 - Flashback"
 , "!3_02 - Feature Presentation"
 , "3_03 - And Now For Today's Sponsors...!"
@@ -309,7 +309,7 @@ std::string filename[CH][N_OST]={{ "AUDIO_ANOTHERHIM.ogg"
 , "home.ogg"
 , "ch2_credits.ogg"
 , "AUDIO_STORY.ogg"
-, ""
+, ""   //the unused Berdly concept
 }
 };
 int main()
