@@ -170,7 +170,7 @@ std::string ostname[CH][N_OST]=
 , "4_29 - SPAWN"
 , "4_30 - GUARDIAN"
 , "4_31 - Need a hand!;"
-, "4_32 - The place where it rained"//audiogroup
+, "4_32 - The place where it rained"
 , "4_33 - The Ol' Jitterbug"
 , "4_34 - Neverending Night"
 , "4_35 - The LEGEND...;"
